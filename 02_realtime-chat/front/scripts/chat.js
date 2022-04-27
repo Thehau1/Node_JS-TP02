@@ -7,7 +7,9 @@ function handleWSMessage(event) {
 
   if (data?.type === 'NEW_MESSAGE') {
     appendMessage(data.payload)
+
   }
+  
 }
 
 const ws = new WebSocket('ws://localhost:5000/chat')
@@ -24,7 +26,9 @@ getHistory()
 
 export function initChat() {
   /** @type {HTMLFormElement | null} */
+  
   const messageForm = document.querySelector('#new-message')
+
   if (!messageForm) throw new Error('missing form')
 
   messageForm.addEventListener('submit', (event) => {
@@ -34,6 +38,7 @@ export function initChat() {
     const body = messageForm.body.value
 
     if (!pseudo || !body) return
+    localStorage.setItem('pseudo', pseudo)
 
     ws.send(JSON.stringify({ pseudo, body }))
     messageForm.body.value = null

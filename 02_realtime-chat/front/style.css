@@ -47,7 +47,7 @@ header {
   border-bottom: solid 1px silver;
 }
 
-p {
+.p {
   margin: 0;
 }
 
@@ -75,6 +75,12 @@ main .top-space {
   border-radius: 6px;
   border: solid 1px #bbb;
   margin-bottom: 18px;
+}
+.date{
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+  color: rgb(0, 0, 0);
 }
 
 .message p {
@@ -113,4 +119,12 @@ input {
 
 input[type='submit'] {
   padding: 2px;
+}
+
+.owner {
+  display : flex;
+  flex-direction: column;
+  align-self: self-end;
+  background-color: rgb(176, 243, 255);
+  
 }
