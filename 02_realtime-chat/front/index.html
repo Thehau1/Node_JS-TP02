@@ -7,10 +7,14 @@
 
     <link rel="stylesheet" href="./style.css" />
     <link rel="icon" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="full-height">
-      <header><h1>Realtime WS Chat</h1></header>
+      <header><h1>Messagerie de l'ESPACE</h1></header>
       <main>
         <div class="top-space"></div>
       </main>
@@ -21,21 +25,21 @@
         <input
           id="pseudo"
           name="pseudo"
-          placeholder="John Doe"
+          placeholder="Ton pseudo..."
           autocomplete="off"
         />
       </div>
       <div>
-        <label for="body">Body</label>
+        <label for="body">Message</label>
         <input
           id="body"
           name="body"
-          placeholder="What's up?"
+          placeholder="Ton message..."
           autocomplete="false"
         />
       </div>
       <div>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Envoyer" />
       </div>
     </form>
     <script src="./scripts/main.js" type="module"></script>
