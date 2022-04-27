@@ -6,6 +6,12 @@ export function appendMessage(data) {
   msgEl.classList.add('message')
   // <div class="message"></div>
 
+  const msgDate = document.createElement('div')
+  msgDate.textContent = data.date
+  msgEl.append(msgDate)
+
+
+
   const pseudoSpan = document.createElement('span')
   pseudoSpan.textContent = data.pseudo
   // <span>Hugo</span>
