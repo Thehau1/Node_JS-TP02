@@ -7,7 +7,9 @@ function handleWSMessage(event) {
 
   if (data?.type === 'NEW_MESSAGE') {
     appendMessage(data.payload)
+
   }
+  
 }
 
 const ws = new WebSocket('ws://localhost:5000/chat')

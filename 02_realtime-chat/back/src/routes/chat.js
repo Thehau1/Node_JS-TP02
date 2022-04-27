@@ -20,7 +20,7 @@ function handleNewMessage(pseudo, body) {
     id: randomUUID(),
     pseudo,
     body,
-    date: format(new Date(), 'Pp') // ajout propriété date
+    date: format(new Date(), 'Pp') 
   }
   messages.push(message)
   return message
@@ -45,11 +45,11 @@ export async function chatRoutes(app) {
       const data = JSON.parse(message.toString('utf-8'))
       broadcast({
         type: 'NEW_MESSAGE',
-        payload: handleNewMessage(data.pseudo, data.body),
+        payload: handleNewMessage(data.pseudo, data.body,),
       })
     })
   })
-  // history
+  // history sur la session actuel du serv (reset au reboot serv)
   app.get('/history', (request, reply) => {
     reply.send(messages.slice(-30))
   })
